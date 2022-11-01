@@ -130,6 +130,10 @@ export class CalculatorComponent {
   }
 
   divide(firstNumber: number, secondNumber: number) {
+    if (secondNumber === 0) {
+      throw "Don't try to divide by zero!"
+    }
+    
     return firstNumber / secondNumber
   }
 }
